@@ -75,6 +75,6 @@ If you can't delegate (no Agent tool in this context), play each expert in turn:
 3. **Where experts disagreed** and the resolution.
 4. **Risks & licensed sign-off items.**
 5. **Next steps** (owner → action → when).
-6. **Experts consulted** (name: contribution).
+6. **Experts consulted** (first name + agent: contribution, e.g., "Ethan (`underwriting-analyst`): ARV and MAO").
 
-Base facts on `docs/` (snapshot Nov 2026). Flag any data that needs refreshing, and never present estimates as verified facts.
+Each expert reads its own `knowledge/<agent>/` folder before answering. Read `knowledge/expert-orchestrator/` yourself for the consultant's standing preferences. Base facts on `docs/` (snapshot Nov 2026). Flag any data that needs refreshing, and never present estimates as verified facts.

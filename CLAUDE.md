@@ -10,8 +10,9 @@ The team is **27 Claude Code project subagents** (25 domain experts plus an orch
 
 ## Repository layout
 ```
-docs/                     Research knowledge base (one file per topic) + expert-roster.md
-.claude/agents/           27 subagents (one .md file each)
+docs/                     Research knowledge base (one file per topic), expert-roster.md, agent-brains.md
+knowledge/<agent-name>/   Company-specific documents each agent reads before every answer
+.claude/agents/           27 subagents (one .md file each, with model + personality)
 .claude/skills/<name>/    40 skills (SKILL.md each); shared across agents
   consult-experts/        Orchestration procedure + routing table (also /consult-experts)
   agent-skill-authoring/  Formats, templates and scripts/validate_team.py
@@ -37,37 +38,42 @@ For ready-made example prompts, see [`docs/how-to-talk-to-your-experts.md`](docs
 **Change the team.** Ask the meta agent: "Use the team-architect to add a short-term-rental revenue manager agent," or "…to improve the insurance skill with the 2027 rate filings."
 
 ## The team
-| Domain | Agent | Role | Skills |
-|---|---|---|---|
-| Team coordination | `expert-orchestrator` | Routes any question to the right experts, coordinates them, returns one combined answer | 1 |
-| Team coordination | `team-architect` | Meta agent: creates new agents and skills and improves existing ones | 1 |
-| Real Estate Investment | `acquisitions-specialist` | Acquisitions & Deal Sourcing Specialist | 10 |
-| Real Estate Investment | `chief-investment-strategist` | Chief Investment Strategist | 11 |
-| Real Estate Investment | `dispositions-specialist` | Dispositions & Exit Specialist | 9 |
-| Real Estate Investment | `market-research-analyst` | Market Research Analyst | 5 |
-| Property Analysis | `due-diligence-specialist` | Due Diligence & Inspection Specialist | 6 |
-| Property Analysis | `insurance-risk-advisor` | Insurance & Catastrophe Risk Advisor | 4 |
-| Property Analysis | `underwriting-analyst` | Underwriting & Valuation Analyst | 9 |
-| Finance | `capital-markets-advisor` | Capital Markets & Lending Advisor | 5 |
-| Finance | `cfo-financial-planner` | Chief Financial Officer / FP&A | 11 |
-| Finance | `investor-relations-manager` | Investor Relations & Partnerships Manager | 3 |
-| Finance | `tax-strategist` | Real Estate Tax Strategist (CPA) | 4 |
-| Renovation | `interior-design-staging-specialist` | Interior Design & Staging Specialist | 4 |
-| Renovation | `permitting-code-specialist` | Permitting & Code Specialist | 4 |
-| Renovation | `renovation-project-manager` | Renovation Project Manager & Estimator | 9 |
-| Operations | `operations-director` | Operations Director | 8 |
-| Operations | `property-manager` | Property Manager & Leasing Specialist | 12 |
-| Operations | `transaction-coordinator` | Transaction Coordinator / Closing Manager | 6 |
-| Legal | `compliance-officer` | Regulatory Compliance Officer | 7 |
-| Legal | `entity-securities-counsel` | Corporate Entity & Securities Counsel | 2 |
-| Legal | `landlord-tenant-counsel` | Landlord-Tenant & Fair Housing Counsel | 4 |
-| Legal | `real-estate-attorney` | Real Estate Transaction Attorney | 8 |
-| Marketing | `brand-content-marketer` | Brand & Content Marketer | 4 |
-| Marketing | `lead-generation-marketer` | Lead Generation Marketer | 7 |
-| Technology | `data-analytics-engineer` | Data & Analytics Engineer | 4 |
-| Technology | `proptech-architect` | PropTech Systems Architect | 6 |
+| Domain | Agent | Name | Model | Role | Skills |
+|---|---|---|---|---|---|
+| Team coordination | `expert-orchestrator` | Morgan | `opus` | Routes any question to the right experts, coordinates them, returns one combined answer | 1 |
+| Team coordination | `team-architect` | Quinn | `opus` | Meta agent: creates new agents and skills and improves existing ones | 1 |
+| Real Estate Investment | `acquisitions-specialist` | Marco | `sonnet` | Acquisitions & Deal Sourcing Specialist | 10 |
+| Real Estate Investment | `chief-investment-strategist` | Victoria | `opus` | Chief Investment Strategist | 11 |
+| Real Estate Investment | `dispositions-specialist` | Jasmine | `sonnet` | Dispositions & Exit Specialist | 9 |
+| Real Estate Investment | `market-research-analyst` | Priya | `sonnet` | Market Research Analyst | 5 |
+| Property Analysis | `due-diligence-specialist` | Ruth | `sonnet` | Due Diligence & Inspection Specialist | 6 |
+| Property Analysis | `insurance-risk-advisor` | Hank | `sonnet` | Insurance & Catastrophe Risk Advisor | 4 |
+| Property Analysis | `underwriting-analyst` | Ethan | `sonnet` | Underwriting & Valuation Analyst | 9 |
+| Finance | `capital-markets-advisor` | Rafael | `opus` | Capital Markets & Lending Advisor | 5 |
+| Finance | `cfo-financial-planner` | Eleanor | `opus` | Chief Financial Officer / FP&A | 11 |
+| Finance | `investor-relations-manager` | Camila | `sonnet` | Investor Relations & Partnerships Manager | 3 |
+| Finance | `tax-strategist` | Simon | `opus` | Real Estate Tax Strategist (CPA) | 4 |
+| Renovation | `interior-design-staging-specialist` | Luna | `haiku` | Interior Design & Staging Specialist | 4 |
+| Renovation | `permitting-code-specialist` | Gloria | `sonnet` | Permitting & Code Specialist | 4 |
+| Renovation | `renovation-project-manager` | Dominic | `sonnet` | Renovation Project Manager & Estimator | 9 |
+| Operations | `operations-director` | Grace | `sonnet` | Operations Director | 8 |
+| Operations | `property-manager` | Tony | `sonnet` | Property Manager & Leasing Specialist | 12 |
+| Operations | `transaction-coordinator` | Penny | `haiku` | Transaction Coordinator / Closing Manager | 6 |
+| Legal | `compliance-officer` | Diane | `opus` | Regulatory Compliance Officer | 7 |
+| Legal | `entity-securities-counsel` | Benjamin | `opus` | Corporate Entity & Securities Counsel | 2 |
+| Legal | `landlord-tenant-counsel` | Sofia | `opus` | Landlord-Tenant & Fair Housing Counsel | 4 |
+| Legal | `real-estate-attorney` | Nathaniel | `opus` | Real Estate Transaction Attorney | 8 |
+| Marketing | `brand-content-marketer` | Maya | `sonnet` | Brand & Content Marketer | 4 |
+| Marketing | `lead-generation-marketer` | Jax | `sonnet` | Lead Generation Marketer | 7 |
+| Technology | `data-analytics-engineer` | Arjun | `sonnet` | Data & Analytics Engineer | 4 |
+| Technology | `proptech-architect` | Kenji | `sonnet` | PropTech Systems Architect | 6 |
 
 Full job descriptions, the skill matrix (which agents use each skill) and the code→file map are in [`docs/expert-roster.md`](docs/expert-roster.md).
+
+## Knowledge folders, brains and personalities
+- **Knowledge folders:** each agent reads `knowledge/<agent-name>/` **before every answer**. Each folder's `README.md` lists the documents that belong there (e.g., the strategist's buy box, the underwriter's term sheets, the property manager's approved lease forms). Name files `YYYY-MM-DD-topic.md`. Sensitive files go in `knowledge/<agent-name>/private/` (git-ignored). Never store passwords, account numbers or personal IDs.
+- **Brains:** each agent file sets `model:`. `opus` for deep strategy, legal and finance judgment (10 agents, including the orchestrator and team architect); `sonnet` for most specialist work (15); `haiku` for fast checklist and lookup work (2). The reasons are in [`docs/agent-brains.md`](docs/agent-brains.md).
+- **Personalities:** every agent has a first name, a voice and a working style (e.g., Morgan the orchestrator, Victoria the strategist, Ethan the underwriter, Penny the transaction coordinator). Experts sign their sections with their name. Personality changes tone only, never accuracy or guardrails.
 
 ## How skills work here
 - Each skill in `.claude/skills/<name>/SKILL.md` holds one area of knowledge or one procedure (e.g., `flood-zone-fema-50-rule`, `deal-underwriting-proforma`).

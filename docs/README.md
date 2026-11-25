@@ -22,6 +22,7 @@ These docs are the shared context for a team of AI expert agents. Each file cove
 | 09 | Marketing & deal sourcing | [09-marketing.md](09-marketing.md) | Marketing / lead gen |
 | 10 | Biggest risks & mitigations | [10-risks.md](10-risks.md) | Risk / all agents |
 | — | **Expert roster: 25 agent roles and 38 shared skills** | [expert-roster.md](expert-roster.md) | Agent builders |
+| — | **Agent brains & personalities: model choice, names, voices, knowledge folders** | [agent-brains.md](agent-brains.md) | Agent builders / users |
 | — | **How to talk to your experts: example prompts and how to ask one agent or the whole team** | [how-to-talk-to-your-experts.md](how-to-talk-to-your-experts.md) | Consultant / users |
 
 ## Key takeaways

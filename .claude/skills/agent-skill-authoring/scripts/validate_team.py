@@ -12,6 +12,8 @@ SKILLS_DIR = os.path.join(ROOT, ".claude", "skills")
 ROUTING = os.path.join(SKILLS_DIR, "consult-experts", "SKILL.md")
 ROSTER = os.path.join(ROOT, "docs", "expert-roster.md")
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+MODELS = {"opus", "sonnet", "haiku", "fable", "inherit"}
+KNOWLEDGE_DIR = os.path.join(ROOT, "knowledge")
 COLORS = {"red", "blue", "green", "yellow", "purple", "orange", "pink", "cyan"}
 NON_ROUTED = {"expert-orchestrator", "team-architect"}
 
@@ -94,6 +96,17 @@ for root, _, files in os.walk(AGENTS_DIR):
             if s not in skills:
                 errors.append(f"agent {name}: skill '{s}' not found in .claude/skills")
             used.setdefault(s, []).append(name)
+        model = fm.get("model")
+        if not model:
+            warnings.append(f"agent {name}: no model set (inherits the session model)")
+        elif model not in MODELS and not str(model).startswith("claude-"):
+            errors.append(f"agent {name}: invalid model '{model}'")
+        if not os.path.isfile(os.path.join(KNOWLEDGE_DIR, name, "README.md")):
+            errors.append(f"agent {name}: missing knowledge/{name}/README.md")
+        if f"knowledge/{name}/" not in body:
+            errors.append(f"agent {name}: system prompt must tell it to read knowledge/{name}/ first")
+        if "## Your personality" not in body:
+            warnings.append(f"agent {name}: no '## Your personality' section")
         if len(body.strip()) < 200:
             warnings.append(f"agent {name}: system prompt looks very short")
         agents[name] = sk
@@ -111,6 +124,12 @@ for a in agents:
         errors.append(f"agent {a}: missing from consult-experts routing table")
     if f"`{a}`" not in roster:
         warnings.append(f"agent {a}: not listed in docs/expert-roster.md")
+
+brains = os.path.join(ROOT, "docs", "agent-brains.md")
+brains_txt = open(brains, encoding="utf-8").read() if os.path.isfile(brains) else ""
+for a in agents:
+    if f"`{a}`" not in brains_txt:
+        warnings.append(f"agent {a}: not listed in docs/agent-brains.md")
 
 print(f"Agents: {len(agents)} | Skills: {len(skills)} | Skill links: {sum(len(v) for v in agents.values())}")
 for w in warnings:
