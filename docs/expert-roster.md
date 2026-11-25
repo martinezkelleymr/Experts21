@@ -171,3 +171,84 @@ Build these first, because the most agents depend on them:
 3. `ATTY` + `TC` handle the contract and closing → `CAP` lines up financing → `CFO` books it.
 4. `REN` + `DES` renovate, with permits from `PERM` → exit through `DISP` + `BRAND` (sell) or `PM` + `LT` (rent) → BRRRR refinance through `CAP`.
 5. `COO`, `TECH`, `TAX`, `ENT` and `IR` support every stage; `COMP` and `INS` monitor ongoing risk.
+
+## 6. Implementation map
+
+The roster is implemented as Claude Code project subagents and skills. See [`CLAUDE.md`](../CLAUDE.md) for how to use the team.
+
+### Agents (`.claude/agents/`)
+
+| Code | Role | Agent file |
+|---|---|---|
+| `CIS` | Chief Investment Strategist | `chief-investment-strategist` |
+| `MRA` | Market Research Analyst | `market-research-analyst` |
+| `ACQ` | Acquisitions & Deal Sourcing Specialist | `acquisitions-specialist` |
+| `DISP` | Dispositions & Exit Specialist | `dispositions-specialist` |
+| `UND` | Underwriting & Valuation Analyst | `underwriting-analyst` |
+| `DD` | Due Diligence & Inspection Specialist | `due-diligence-specialist` |
+| `INS` | Insurance & Catastrophe Risk Advisor | `insurance-risk-advisor` |
+| `CAP` | Capital Markets & Lending Advisor | `capital-markets-advisor` |
+| `CFO` | Chief Financial Officer / FP&A | `cfo-financial-planner` |
+| `TAX` | Real Estate Tax Strategist (CPA) | `tax-strategist` |
+| `IR` | Investor Relations & Partnerships Manager | `investor-relations-manager` |
+| `REN` | Renovation Project Manager & Estimator | `renovation-project-manager` |
+| `PERM` | Permitting & Code Specialist | `permitting-code-specialist` |
+| `DES` | Interior Design & Staging Specialist | `interior-design-staging-specialist` |
+| `COO` | Operations Director | `operations-director` |
+| `PM` | Property Manager & Leasing Specialist | `property-manager` |
+| `TC` | Transaction Coordinator / Closing Manager | `transaction-coordinator` |
+| `ATTY` | Real Estate Transaction Attorney | `real-estate-attorney` |
+| `LT` | Landlord-Tenant & Fair Housing Counsel | `landlord-tenant-counsel` |
+| `ENT` | Corporate Entity & Securities Counsel | `entity-securities-counsel` |
+| `COMP` | Regulatory Compliance Officer | `compliance-officer` |
+| `LEAD` | Lead Generation Marketer | `lead-generation-marketer` |
+| `BRAND` | Brand & Content Marketer | `brand-content-marketer` |
+| `DATA` | Data & Analytics Engineer | `data-analytics-engineer` |
+| `TECH` | PropTech Systems Architect | `proptech-architect` |
+| — | Orchestrator: routes questions, coordinates experts, merges one answer | `expert-orchestrator` |
+| — | Meta agent: creates and improves agents and skills | `team-architect` |
+
+### Skills (`.claude/skills/<name>/SKILL.md`)
+
+| # | Skill | Directory |
+|---|---|---|
+| S01 | Comparable sales & ARV analysis | `comparable-sales-arv-analysis` |
+| S02 | Rental comps & rent pricing | `rental-comps-rent-pricing` |
+| S03 | Deal underwriting & pro-forma modeling | `deal-underwriting-proforma` |
+| S04 | Exit strategy analysis | `exit-strategy-analysis` |
+| S05 | Market & neighborhood research | `market-neighborhood-research` |
+| S06 | Public records research | `public-records-research` |
+| S07 | Flood zone & FEMA 50% rule assessment | `flood-zone-fema-50-rule` |
+| S08 | Property insurance quoting & mitigation | `property-insurance-mitigation` |
+| S09 | Property inspection & defect identification | `property-inspection-defects` |
+| S10 | HOA & condo document review | `hoa-condo-document-review` |
+| S11 | Rehab scoping & cost estimating | `rehab-scoping-cost-estimating` |
+| S12 | Florida building permits & code | `florida-building-permits-code` |
+| S13 | Historic preservation review | `historic-preservation-review` |
+| S14 | Construction project & draw management | `construction-draw-management` |
+| S15 | Contractor & vendor management | `contractor-vendor-management` |
+| S16 | Interior design, finish selection & staging | `interior-design-staging` |
+| S17 | Seller negotiation & offer strategy | `seller-negotiation-offers` |
+| S18 | Lending & capital stack structuring | `lending-capital-stack` |
+| S19 | Financial planning, budgeting & cash management | `financial-planning-cash-management` |
+| S20 | Real estate tax planning | `real-estate-tax-planning` |
+| S21 | Entity structuring & securities | `entity-structuring-securities` |
+| S22 | Florida contract & closing law | `florida-contract-closing-law` |
+| S23 | Real estate licensing compliance (Ch. 475) | `real-estate-licensing-compliance` |
+| S24 | Florida landlord-tenant law (Ch. 83) | `florida-landlord-tenant-law` |
+| S25 | Fair housing compliance | `fair-housing-compliance` |
+| S26 | Business tax & rental tax registrations | `business-rental-tax-registrations` |
+| S27 | Regulatory & legislative monitoring | `regulatory-legislative-monitoring` |
+| S28 | Marketing compliance (TCPA / FTSA / DNC) | `marketing-compliance-tcpa-ftsa` |
+| S29 | Lead generation & direct-response marketing | `lead-generation-direct-response` |
+| S30 | Brand, content & listing marketing | `brand-content-listing-marketing` |
+| S31 | Relationship & network management | `relationship-network-management` |
+| S32 | Tenant screening, leasing & rental operations | `tenant-screening-leasing-operations` |
+| S33 | Transaction coordination & closing management | `transaction-coordination-closing` |
+| S34 | Risk assessment & hurricane preparedness | `risk-hurricane-preparedness` |
+| S35 | Process design, KPIs & staffing | `process-kpis-staffing` |
+| S36 | Real estate data engineering & analytics | `real-estate-data-analytics` |
+| S37 | CRM, PropTech & workflow automation | `crm-proptech-automation` |
+| S38 | Cybersecurity & wire-fraud prevention | `cybersecurity-wire-fraud-prevention` |
+| S39 | Expert routing & collaboration (used by `expert-orchestrator`; also `/consult-experts`) | `consult-experts` |
+| S40 | Agent & skill authoring + validator (used by `team-architect`, `proptech-architect`) | `agent-skill-authoring` |

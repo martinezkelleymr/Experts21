@@ -37,4 +37,4 @@ These docs are the shared context for a team of AI expert agents. Each file cove
 - Nothing here is legal, tax or investment advice.
 
 ## Expert-agent roster
-See [expert-roster.md](expert-roster.md) for the full list of 25 expert agents across 8 domains, the 38 skills they share, and how they work together on a deal.
+See [expert-roster.md](expert-roster.md) for the full list of 25 expert agents across 8 domains, the skills they share, and how they work together on a deal. The team is built as Claude Code subagents in `.claude/agents/` and skills in `.claude/skills/`, plus an orchestrator and a meta agent. See [`../CLAUDE.md`](../CLAUDE.md) for how to use it.
