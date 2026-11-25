@@ -32,6 +32,8 @@ Running the orchestrator as the main agent is the most reliable way to let it de
 - "Use the permitting-code-specialist to tell me whether this rehab triggers the FEMA 50% rule."
 - `claude --agent compliance-officer` for a whole session with one expert.
 
+For ready-made example prompts, see [`docs/how-to-talk-to-your-experts.md`](docs/how-to-talk-to-your-experts.md).
+
 **Change the team.** Ask the meta agent: "Use the team-architect to add a short-term-rental revenue manager agent," or "…to improve the insurance skill with the 2027 rate filings."
 
 ## The team
