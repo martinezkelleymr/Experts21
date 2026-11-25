@@ -21,6 +21,7 @@ These docs are the shared context for a team of AI expert agents. Each file cove
 | 08 | Staffing & organization | [08-staffing.md](08-staffing.md) | Operations |
 | 09 | Marketing & deal sourcing | [09-marketing.md](09-marketing.md) | Marketing / lead gen |
 | 10 | Biggest risks & mitigations | [10-risks.md](10-risks.md) | Risk / all agents |
+| — | **Expert roster: 25 agent roles and 38 shared skills** | [expert-roster.md](expert-roster.md) | Agent builders |
 
 ## Key takeaways
 - **Prices are high and rents are flat.** Typical Boca value is about $577K. Single-family homes east of I-95 usually sell for $600K to $2M or more. Boca houses rent for about $5.5K a month on average. Rentals only cash-flow when bought at a real discount, so **value-add strategies (flip/BRRRR) fit this market better than buying retail rentals.**
@@ -35,5 +36,5 @@ These docs are the shared context for a team of AI expert agents. Each file cove
 - Items marked ⚠️ in file 07 are unverified and need confirmation from the city or county or an attorney.
 - Nothing here is legal, tax or investment advice.
 
-## Suggested expert-agent roster (next step)
-Market Analyst · Deal Sourcer/Acquisitions · Underwriter (ARV/rehab/DSCR) · Construction & Permits Manager · Financing/Capital · Compliance & Legal · Property Manager/Leasing · Marketing & Lead Gen · Dispositions · Risk & Insurance.
+## Expert-agent roster
+See [expert-roster.md](expert-roster.md) for the full list of 25 expert agents across 8 domains, the 38 skills they share, and how they work together on a deal.
