@@ -1,0 +1,18 @@
+# Netlify builds the web app in web/ with no extra UI settings needed.
+# Set ANTHROPIC_API_KEY (and optionally APP_ACCESS_CODE) under Site configuration → Environment variables.
+[build]
+  base = "web"                     # npm install and the build run in web/ (the rest of the repo is still checked out)
+  command = "npm run build"        # reads ../.claude/agents, ../.claude/skills, ../knowledge and ../docs, then builds with Vite
+  publish = "dist"                 # relative to base
+  functions = "netlify/functions"  # relative to base; contains chat.mjs → /api/chat
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 5173
+  framework = "#custom"

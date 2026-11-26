@@ -16,6 +16,7 @@ knowledge/<agent-name>/   Company-specific documents each agent reads before eve
 .claude/skills/<name>/    42 skills (SKILL.md each); shared across agents
   consult-experts/        Orchestration procedure + routing table (also /consult-experts)
   agent-skill-authoring/  Formats, templates and scripts/validate_team.py
+web/                      React web app + Netlify Function: chat with any expert or the whole team (netlify.toml at the root)
 sdk/                      Node.js Agent SDK script: ask the real-estate-investment-analyst from the command line
 exports/                  Standalone claude.ai skill packages (e.g., real-estate-investment-analyst.zip)
 CLAUDE.md                 This guide
@@ -37,6 +38,8 @@ Running the orchestrator as the main agent is the most reliable way to let it de
 - `claude --agent compliance-officer` for a whole session with one expert.
 
 For ready-made example prompts, see [`docs/how-to-talk-to-your-experts.md`](docs/how-to-talk-to-your-experts.md).
+
+**In the browser:** the React app in `web/` (deployed on Netlify) lists every agent with name, personality and model, and has an "Ask the whole team" mode through the orchestrator. See [`web/README.md`](web/README.md).
 
 **From code (Agent SDK):** `cd sdk && npm install && node ask-analyst.mjs "<question>"` asks Olivia (`real-estate-investment-analyst`) with her knowledge folder loaded. See [`sdk/README.md`](sdk/README.md).
 
@@ -100,5 +103,6 @@ Full job descriptions, the skill matrix (which agents use each skill) and the co
 python3 .claude/skills/agent-skill-authoring/scripts/validate_team.py
 ```
 - When `docs/` research is refreshed, have the team-architect update the affected skills (each skill lists its source docs under **References**).
+- Web app: it reads agents, skills, knowledge folders and research at build time, so a push to `main` redeploys it with the current team. Run `cd web && npm run build && npm test` to check it.
 - Standalone export: after changing the real-estate-investment-analyst agent, its skills, knowledge or `docs/`, rebuild the claude.ai skill with `python3 exports/build_real_estate_investment_analyst_skill.py` (see `exports/README.md`).
 - Format references: [subagents](https://code.claude.com/docs/en/sub-agents) · [skills](https://code.claude.com/docs/en/skills).
