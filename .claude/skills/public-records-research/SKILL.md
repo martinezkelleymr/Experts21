@@ -5,7 +5,7 @@ description: "Researches Palm Beach County public records for a property or owne
 
 # Public records research
 
-*Roster skill S06. Used by: `due-diligence-specialist` (owner), `acquisitions-specialist`, `real-estate-attorney`, `permitting-code-specialist`, `data-analytics-engineer`, `transaction-coordinator`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S06. Used by: `due-diligence-specialist` (owner), `acquisitions-specialist`, `real-estate-attorney`, `permitting-code-specialist`, `data-analytics-engineer`, `transaction-coordinator`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Find what the public record says about a property before money or effort is committed.

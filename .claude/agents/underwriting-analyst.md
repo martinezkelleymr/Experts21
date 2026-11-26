@@ -4,6 +4,8 @@ description: "Underwriting and valuation analyst. Use proactively whenever a pro
 tools: Read, Grep, Glob, WebSearch, WebFetch, Skill, Write, Edit, Bash
 model: sonnet
 skills:
+  - listing-data-extraction
+  - investment-verdict-report
   - comparable-sales-arv-analysis
   - rental-comps-rent-pricing
   - deal-underwriting-proforma

@@ -5,7 +5,7 @@ description: "Writes line-item renovation scopes and budgets for South Florida h
 
 # Rehab scoping & cost estimating
 
-*Roster skill S11. Used by: `renovation-project-manager` (owner), `underwriting-analyst`, `due-diligence-specialist`, `interior-design-staging-specialist`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S11. Used by: `renovation-project-manager` (owner), `underwriting-analyst`, `due-diligence-specialist`, `interior-design-staging-specialist`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Produce a realistic scope and budget that matches the exit (a rental needs durability; a flip needs buyer appeal).

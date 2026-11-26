@@ -1,6 +1,6 @@
 # How to Talk to Your Experts
 
-This repo has an AI advisory team for the Boca Raton & Delray Beach real estate investment company: **25 expert agents**, an **orchestrator** (`expert-orchestrator`) that coordinates them, and a **meta agent** (`team-architect`) that maintains the team. See [`../CLAUDE.md`](../CLAUDE.md) for the full team list and [`expert-roster.md`](expert-roster.md) for each role.
+This repo has an AI advisory team for the Boca Raton & Delray Beach real estate investment company: **26 expert agents**, an **orchestrator** (`expert-orchestrator`) that coordinates them, and a **meta agent** (`team-architect`) that maintains the team. See [`../CLAUDE.md`](../CLAUDE.md) for the full team list and [`expert-roster.md`](expert-roster.md) for each role.
 
 Run these commands from the repository root so Claude Code loads the agents in `.claude/agents/` and the skills in `.claude/skills/`.
 
@@ -44,6 +44,12 @@ Use this for narrow questions in a single specialty. It's faster and cheaper tha
 @"underwriting-analyst (agent)" Run a flip and a BRRRR pro forma: purchase $480K, rehab $85K, ARV $690K, rent $4,600/mo.
 ```
 
+**Evaluate a listing (BUY / NEGOTIATE / PASS):**
+```text
+@"real-estate-investment-analyst (agent)" Is this a good investment? <paste the Zillow listing text or URL>. Compare rent, flip and BRRRR and give me a maximum price.
+```
+Zillow often blocks automated fetching, so pasting the listing text (or saving it in `knowledge/real-estate-investment-analyst/`) works best.
+
 **Plain language:**
 ```text
 Use the permitting-code-specialist to tell me whether a $95K rehab on a house with a $170K structure value in an AE zone triggers the FEMA 50% rule.
@@ -54,7 +60,7 @@ Use the permitting-code-specialist to tell me whether a $95K rehab on a house wi
 claude --agent landlord-tenant-counsel
 ```
 
-Useful agent names to start with: `chief-investment-strategist`, `market-research-analyst`, `acquisitions-specialist`, `underwriting-analyst`, `due-diligence-specialist`, `insurance-risk-advisor`, `capital-markets-advisor`, `renovation-project-manager`, `permitting-code-specialist`, `property-manager`, `real-estate-attorney`, `compliance-officer`, `lead-generation-marketer`.
+Useful agent names to start with: `real-estate-investment-analyst`, `chief-investment-strategist`, `market-research-analyst`, `acquisitions-specialist`, `underwriting-analyst`, `due-diligence-specialist`, `insurance-risk-advisor`, `capital-markets-advisor`, `renovation-project-manager`, `permitting-code-specialist`, `property-manager`, `real-estate-attorney`, `compliance-officer`, `lead-generation-marketer`.
 
 ---
 

@@ -5,7 +5,7 @@ description: "Identifies physical defects common in South Florida houses (1950s\
 
 # Property inspection & defect identification
 
-*Roster skill S09. Used by: `due-diligence-specialist` (owner), `renovation-project-manager`, `property-manager`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S09. Used by: `due-diligence-specialist` (owner), `renovation-project-manager`, `property-manager`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Catch expensive hidden problems and turn them into repair budgets and negotiating points.

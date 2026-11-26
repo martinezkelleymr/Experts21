@@ -5,7 +5,7 @@ description: "Builds flip, buy-and-hold and BRRRR pro formas (maximum allowable 
 
 # Deal underwriting & pro-forma modeling
 
-*Roster skill S03. Used by: `underwriting-analyst` (owner), `chief-investment-strategist`, `cfo-financial-planner`, `capital-markets-advisor`, `acquisitions-specialist`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S03. Used by: `underwriting-analyst` (owner), `chief-investment-strategist`, `cfo-financial-planner`, `capital-markets-advisor`, `acquisitions-specialist`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Turn ARV, rent, rehab and financing inputs into a decision and a **maximum allowable offer (MAO)** for each exit.

@@ -60,7 +60,7 @@ description: <What it does>. Use when <triggers>.   # with when_to_use, ≤ 1,53
 - Domain skills are **shared**: one skill, many agents. The first agent listed in the roster's skill matrix is its owner.
 - Every agent must: say when to use it in `description`, list its skills, define its deliverable, hand-offs and guardrails, and point to the relevant `docs/` files.
 - Licensed areas (legal, tax, insurance, brokerage, contracting) must say a licensed human signs off.
-- Team size: 10–50 agents. Today: 25 roster experts + `expert-orchestrator` + `team-architect`.
+- Team size: 10–50 agents. Today: 26 roster experts + `expert-orchestrator` + `team-architect`.
 - Mark unverified facts with ⚠️ and give the as-of date for market data.
 
 ## Checklist when adding or changing an agent or skill

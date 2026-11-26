@@ -2,7 +2,7 @@
 
 This is the advisory team for a consultant to a company that buys houses in Boca Raton and Delray Beach, FL, to **rent**, **renovate and resell**, or **renovate and rent (BRRRR)**. Each role below will become an AI agent. The roster is built on the research in this folder (see [README.md](README.md)); the "Key docs" column lists the research files each agent relies on most.
 
-**25 agents · 38 skills · 8 domains.** Agent codes (e.g., `UND`) are used in the skill tables.
+**26 agents · 40 skills · 8 domains.** Agent codes (e.g., `UND`) are used in the skill tables.
 
 > Licensed roles (attorneys, CPA, real-estate broker, contractors, insurance agent) need a licensed human to sign off. Their agents advise and draft; they don't replace the professional.
 
@@ -17,6 +17,7 @@ This is the advisory team for a consultant to a company that buys houses in Boca
 | 2 | `MRA` | **Market Research Analyst** | Tracks Boca and Delray prices, rents, inventory, investor activity and policy shifts such as Amendment 3, down to the ZIP code. | 01, 02 |
 | 3 | `ACQ` | **Acquisitions & Deal Sourcing Specialist** | Works motivated-seller and off-market leads, runs seller appointments and makes offers inside the buy box. | 02, 03, 09 |
 | 4 | `DISP` | **Dispositions & Exit Specialist** | Sells finished flips during the Nov–Apr season, wholesales or assigns deals that don't fit, and manages the cash-buyer list. | 04, 09 |
+| 26 | `INV` | **Real Estate Investment Analyst** | Analyzes specific listings (Zillow, Redfin, MLS) across buy-and-rent, flip and BRRRR, and gives a BUY, NEGOTIATE or PASS verdict with the math and a maximum price. | 01, 02, 04, 05, 06, 10 |
 
 ### Property Analysis
 
@@ -80,17 +81,17 @@ Each skill is defined once and shared by every agent listed. The **first agent l
 
 | # | Skill | What it covers | Used by (owner first) | # agents |
 |---|---|---|---|---|
-| S01 | **Comparable sales & ARV analysis** | Pick and adjust recent sold comps (6 months or less) to estimate after-repair value. | `UND`, `ACQ`, `DISP`, `CIS`, `MRA` | 5 |
-| S02 | **Rental comps & rent pricing** | Estimate market rent by bedroom count, school zone and season; long-term vs. seasonal furnished. | `MRA`, `UND`, `PM`, `CIS` | 4 |
-| S03 | **Deal underwriting & pro-forma modeling** | Flip, rental and BRRRR models: max offer (70–75% of ARV minus rehab), holding costs, cash-on-cash return, cap rate, DSCR stress tests. | `UND`, `CIS`, `CFO`, `CAP`, `ACQ` | 5 |
-| S04 | **Exit strategy analysis** | Compare sell, rent, refinance and wholesale exits for each property, including seasonal timing. | `CIS`, `UND`, `DISP`, `CFO` | 4 |
-| S05 | **Market & neighborhood research** | ZIP and neighborhood trends, city vs. unincorporated, schools, demand drivers, investor activity. | `MRA`, `CIS`, `ACQ`, `UND`, `DATA` | 5 |
-| S06 | **Public records research** | Palm Beach County Property Appraiser and Clerk: ownership, sales, liens, lis pendens, probate, permit history, code cases. | `DD`, `ACQ`, `ATTY`, `PERM`, `DATA`, `TC` | 6 |
-| S07 | **Flood zone & FEMA 50% rule assessment** | Find the FEMA zone, estimate structure value and check whether the rehab scope triggers substantial improvement. | `DD`, `PERM`, `INS`, `UND`, `REN` | 5 |
-| S08 | **Property insurance quoting & mitigation** | 4-point and wind-mitigation reports, roof-age rules (§627.7011), DP-3, flood and builder's-risk quotes, mitigation credits. | `INS`, `DD`, `UND`, `PM`, `CFO` | 5 |
-| S09 | **Property inspection & defect identification** | Spot cast-iron drains, old electrical panels, polybutylene/galvanized pipe, Chinese drywall, lead paint, termites, mold and roof condition. | `DD`, `REN`, `PM` | 3 |
-| S10 | **HOA & condo document review** | Leasing restrictions, approvals, estoppels, special assessments, milestone inspection/SIRS status, 55+ rules. | `DD`, `ATTY`, `UND`, `PM` | 4 |
-| S11 | **Rehab scoping & cost estimating** | Line-item scopes and budgets using South Florida cost benchmarks, with a 10–20% contingency. | `REN`, `UND`, `DD`, `DES` | 4 |
+| S01 | **Comparable sales & ARV analysis** | Pick and adjust recent sold comps (6 months or less) to estimate after-repair value. | `UND`, `ACQ`, `DISP`, `CIS`, `MRA`, `INV` | 6 |
+| S02 | **Rental comps & rent pricing** | Estimate market rent by bedroom count, school zone and season; long-term vs. seasonal furnished. | `MRA`, `UND`, `PM`, `CIS`, `INV` | 5 |
+| S03 | **Deal underwriting & pro-forma modeling** | Flip, rental and BRRRR models: max offer (70–75% of ARV minus rehab), holding costs, cash-on-cash return, cap rate, DSCR stress tests. | `UND`, `CIS`, `CFO`, `CAP`, `ACQ`, `INV` | 6 |
+| S04 | **Exit strategy analysis** | Compare sell, rent, refinance and wholesale exits for each property, including seasonal timing. | `CIS`, `UND`, `DISP`, `CFO`, `INV` | 5 |
+| S05 | **Market & neighborhood research** | ZIP and neighborhood trends, city vs. unincorporated, schools, demand drivers, investor activity. | `MRA`, `CIS`, `ACQ`, `UND`, `DATA`, `INV` | 6 |
+| S06 | **Public records research** | Palm Beach County Property Appraiser and Clerk: ownership, sales, liens, lis pendens, probate, permit history, code cases. | `DD`, `ACQ`, `ATTY`, `PERM`, `DATA`, `TC`, `INV` | 7 |
+| S07 | **Flood zone & FEMA 50% rule assessment** | Find the FEMA zone, estimate structure value and check whether the rehab scope triggers substantial improvement. | `DD`, `PERM`, `INS`, `UND`, `REN`, `INV` | 6 |
+| S08 | **Property insurance quoting & mitigation** | 4-point and wind-mitigation reports, roof-age rules (§627.7011), DP-3, flood and builder's-risk quotes, mitigation credits. | `INS`, `DD`, `UND`, `PM`, `CFO`, `INV` | 6 |
+| S09 | **Property inspection & defect identification** | Spot cast-iron drains, old electrical panels, polybutylene/galvanized pipe, Chinese drywall, lead paint, termites, mold and roof condition. | `DD`, `REN`, `PM`, `INV` | 4 |
+| S10 | **HOA & condo document review** | Leasing restrictions, approvals, estoppels, special assessments, milestone inspection/SIRS status, 55+ rules. | `DD`, `ATTY`, `UND`, `PM`, `INV` | 5 |
+| S11 | **Rehab scoping & cost estimating** | Line-item scopes and budgets using South Florida cost benchmarks, with a 10–20% contingency. | `REN`, `UND`, `DD`, `DES`, `INV` | 5 |
 | S12 | **Florida building permits & code** | City vs. county permit offices, Florida Building Code, notices of commencement, lien law, verifying contractor licenses. | `PERM`, `REN`, `COMP`, `ATTY` | 4 |
 | S13 | **Historic preservation review** | Delray Certificates of Appropriateness and Boca historic overlays: design limits and approval timelines. | `PERM`, `REN`, `DES` | 3 |
 | S14 | **Construction project & draw management** | Schedules, inspections, lender draw requests, change orders, lien releases. | `REN`, `CAP`, `COO`, `CFO` | 4 |
@@ -99,7 +100,7 @@ Each skill is defined once and shared by every agent listed. The **first agent l
 | S17 | **Seller negotiation & offer strategy** | Find what the seller needs, structure offers (cash, terms, seller financing) and handle objections. | `ACQ`, `DISP`, `CIS` | 3 |
 | S18 | **Lending & capital stack structuring** | Hard money, DSCR, conventional, portfolio, private money, HELOC; leverage, refi seasoning, prepayment penalties. | `CAP`, `CFO`, `CIS`, `IR` | 4 |
 | S19 | **Financial planning, budgeting & cash management** | Company budget, reserves, deal cash flow, portfolio reporting, bookkeeping oversight. | `CFO`, `CIS`, `CAP`, `COO` | 4 |
-| S20 | **Real estate tax planning** | Amendment 3 caps, millage, reassessment on sale, depreciation and cost segregation, 1031 exchanges, dealer status, entity elections. | `TAX`, `CFO`, `CIS`, `ENT` | 4 |
+| S20 | **Real estate tax planning** | Amendment 3 caps, millage, reassessment on sale, depreciation and cost segregation, 1031 exchanges, dealer status, entity elections. | `TAX`, `CFO`, `CIS`, `ENT`, `INV` | 5 |
 | S21 | **Entity structuring & securities** | LLC hierarchy, operating agreements, FinCEN reporting, Reg D 506(b)/(c) offerings. | `ENT`, `CFO`, `TAX`, `IR` | 4 |
 | S22 | **Florida contract & closing law** | FAR/BAR contracts, assignments, double closings, doc stamps and intangible tax, title insurance, disclosures. | `ATTY`, `TC`, `ACQ`, `DISP` | 4 |
 | S23 | **Real estate licensing compliance (Ch. 475)** | What unlicensed people may and may not do: wholesaling marketing, brokerage, managing property for others. | `COMP`, `ATTY`, `ACQ`, `DISP`, `LEAD` | 5 |
@@ -113,11 +114,13 @@ Each skill is defined once and shared by every agent listed. The **first agent l
 | S31 | **Relationship & network management** | Private lenders, cash buyers, agents, wholesalers, probate/divorce attorneys, lenders. | `IR`, `DISP`, `ACQ`, `CAP`, `LEAD` | 5 |
 | S32 | **Tenant screening, leasing & rental operations** | Screening criteria (income 3x rent, credit, eviction history, HUD criminal-history guidance), move-in/out, maintenance, renewals. | `PM`, `LT`, `COO` | 3 |
 | S33 | **Transaction coordination & closing management** | Contract timelines, inspection and financing deadlines, title and escrow, closing checklists. | `TC`, `ATTY`, `ACQ`, `DISP` | 4 |
-| S34 | **Risk assessment & hurricane preparedness** | Risk register, storm plans for vacant rehabs and rentals, reserves, concentration risk. | `INS`, `COO`, `REN`, `PM`, `CIS` | 5 |
+| S34 | **Risk assessment & hurricane preparedness** | Risk register, storm plans for vacant rehabs and rentals, reserves, concentration risk. | `INS`, `COO`, `REN`, `PM`, `CIS`, `INV` | 6 |
 | S35 | **Process design, KPIs & staffing** | Workflows, SOPs, scorecards, hiring plans, in-house vs. outsourced decisions. | `COO`, `CIS`, `CFO`, `TECH` | 4 |
 | S36 | **Real estate data engineering & analytics** | Pipelines from data tools, MLS and public records; dashboards; lead scoring; competitor tracking. | `DATA`, `MRA`, `LEAD`, `CFO`, `TECH` | 5 |
 | S37 | **CRM, PropTech & workflow automation** | CRM, property-management, accounting and e-signature tools; integrations; multi-agent orchestration. | `TECH`, `COO`, `LEAD`, `PM`, `TC` | 5 |
 | S38 | **Cybersecurity & wire-fraud prevention** | Verify wiring instructions, protect PII and tenant data, manage access, recognize phishing. | `TECH`, `TC`, `CFO`, `ATTY` | 4 |
+| S41 | **Listing data extraction & data-gap check** | Pull facts from Zillow/Redfin/MLS listings or pasted text, verify them against public records, separate claims from facts, list missing information, never invent data. | `INV`, `ACQ`, `UND` | 3 |
+| S42 | **Investment verdict report (BUY / NEGOTIATE / PASS)** | Compare the three strategies with a reproducible calculator, run sensitivity checks, solve the maximum price, decide with set rules, list documents used. | `INV`, `CIS`, `UND` | 3 |
 
 ## 3. Skills by agent
 
@@ -125,11 +128,12 @@ The same mapping as section 2, viewed from each agent. Use it as the skill list 
 
 | Code | Role | Skills |
 |---|---|---|
-| `CIS` | Chief Investment Strategist | S01 Comparable sales & ARV analysis; S02 Rental comps & rent pricing; S03 Deal underwriting & pro-forma modeling; S04 Exit strategy analysis; S05 Market & neighborhood research; S17 Seller negotiation & offer strategy; S18 Lending & capital stack structuring; S19 Financial planning, budgeting & cash management; S20 Real estate tax planning; S34 Risk assessment & hurricane preparedness; S35 Process design, KPIs & staffing (11) |
+| `CIS` | Chief Investment Strategist | S01 Comparable sales & ARV analysis; S02 Rental comps & rent pricing; S03 Deal underwriting & pro-forma modeling; S04 Exit strategy analysis; S05 Market & neighborhood research; S17 Seller negotiation & offer strategy; S18 Lending & capital stack structuring; S19 Financial planning, budgeting & cash management; S20 Real estate tax planning; S34 Risk assessment & hurricane preparedness; S35 Process design, KPIs & staffing; S42 Investment verdict report (12) |
 | `MRA` | Market Research Analyst | S01 Comparable sales & ARV analysis; S02 Rental comps & rent pricing; S05 Market & neighborhood research; S27 Regulatory & legislative monitoring; S36 Real estate data engineering & analytics (5) |
-| `ACQ` | Acquisitions & Deal Sourcing Specialist | S01 Comparable sales & ARV analysis; S03 Deal underwriting & pro-forma modeling; S05 Market & neighborhood research; S06 Public records research; S17 Seller negotiation & offer strategy; S22 Florida contract & closing law; S23 Real estate licensing compliance (Ch. 475); S29 Lead generation & direct-response marketing; S31 Relationship & network management; S33 Transaction coordination & closing management (10) |
+| `ACQ` | Acquisitions & Deal Sourcing Specialist | S01 Comparable sales & ARV analysis; S03 Deal underwriting & pro-forma modeling; S05 Market & neighborhood research; S06 Public records research; S17 Seller negotiation & offer strategy; S22 Florida contract & closing law; S23 Real estate licensing compliance (Ch. 475); S29 Lead generation & direct-response marketing; S31 Relationship & network management; S33 Transaction coordination & closing management; S41 Listing data extraction & data-gap check (11) |
 | `DISP` | Dispositions & Exit Specialist | S01 Comparable sales & ARV analysis; S04 Exit strategy analysis; S16 Interior design, finish selection & staging; S17 Seller negotiation & offer strategy; S22 Florida contract & closing law; S23 Real estate licensing compliance (Ch. 475); S30 Brand, content & listing marketing; S31 Relationship & network management; S33 Transaction coordination & closing management (9) |
-| `UND` | Underwriting & Valuation Analyst | S01 Comparable sales & ARV analysis; S02 Rental comps & rent pricing; S03 Deal underwriting & pro-forma modeling; S04 Exit strategy analysis; S05 Market & neighborhood research; S07 Flood zone & FEMA 50% rule assessment; S08 Property insurance quoting & mitigation; S10 HOA & condo document review; S11 Rehab scoping & cost estimating (9) |
+| `INV` | Real Estate Investment Analyst | S01 Comparable sales & ARV analysis; S02 Rental comps & rent pricing; S03 Deal underwriting & pro-forma modeling; S04 Exit strategy analysis; S05 Market & neighborhood research; S06 Public records research; S07 Flood zone & FEMA 50% rule assessment; S08 Property insurance quoting & mitigation; S09 Property inspection & defect identification; S10 HOA & condo document review; S11 Rehab scoping & cost estimating; S20 Real estate tax planning; S34 Risk assessment & hurricane preparedness; S41 Listing data extraction & data-gap check; S42 Investment verdict report (15) |
+| `UND` | Underwriting & Valuation Analyst | S01 Comparable sales & ARV analysis; S02 Rental comps & rent pricing; S03 Deal underwriting & pro-forma modeling; S04 Exit strategy analysis; S05 Market & neighborhood research; S07 Flood zone & FEMA 50% rule assessment; S08 Property insurance quoting & mitigation; S10 HOA & condo document review; S11 Rehab scoping & cost estimating; S41 Listing data extraction & data-gap check; S42 Investment verdict report (11) |
 | `DD` | Due Diligence & Inspection Specialist | S06 Public records research; S07 Flood zone & FEMA 50% rule assessment; S08 Property insurance quoting & mitigation; S09 Property inspection & defect identification; S10 HOA & condo document review; S11 Rehab scoping & cost estimating (6) |
 | `INS` | Insurance & Catastrophe Risk Advisor | S07 Flood zone & FEMA 50% rule assessment; S08 Property insurance quoting & mitigation; S27 Regulatory & legislative monitoring; S34 Risk assessment & hurricane preparedness (4) |
 | `CAP` | Capital Markets & Lending Advisor | S03 Deal underwriting & pro-forma modeling; S14 Construction project & draw management; S18 Lending & capital stack structuring; S19 Financial planning, budgeting & cash management; S31 Relationship & network management (5) |
@@ -155,19 +159,19 @@ The same mapping as section 2, viewed from each agent. Use it as the skill list 
 
 Build these first, because the most agents depend on them:
 
-- **S06 Public records research**: 6 agents
+- **S06 Public records research**: 7 agents
+- **S01 Comparable sales & ARV analysis**: 6 agents
+- **S03 Deal underwriting & pro-forma modeling**: 6 agents
+- **S05 Market & neighborhood research**: 6 agents
+- **S07 Flood zone & FEMA 50% rule assessment**: 6 agents
+- **S08 Property insurance quoting & mitigation**: 6 agents
 - **S27 Regulatory & legislative monitoring**: 6 agents
-- **S01 Comparable sales & ARV analysis**: 5 agents
-- **S03 Deal underwriting & pro-forma modeling**: 5 agents
-- **S05 Market & neighborhood research**: 5 agents
-- **S07 Flood zone & FEMA 50% rule assessment**: 5 agents
-- **S08 Property insurance quoting & mitigation**: 5 agents
-- **S23 Real estate licensing compliance (Ch. 475)**: 5 agents
+- **S34 Risk assessment & hurricane preparedness**: 6 agents
 
 ## 5. How the agents work together on a deal
 
 1. `MRA` + `DATA` → target ZIPs and lead lists → `LEAD` runs campaigns (with compliance checks from `COMP`).
-2. `ACQ` qualifies the seller → `UND` underwrites all three exits → `DD`, `INS` and `PERM` check flood zone, insurance, permits and HOA rules → `CIS` approves.
+2. For a specific listing, `INV` screens it and gives BUY / NEGOTIATE / PASS with `REN`'s rehab estimate. `ACQ` qualifies the seller → `UND` underwrites all three exits → `DD`, `INS` and `PERM` check flood zone, insurance, permits and HOA rules → `CIS` approves.
 3. `ATTY` + `TC` handle the contract and closing → `CAP` lines up financing → `CFO` books it.
 4. `REN` + `DES` renovate, with permits from `PERM` → exit through `DISP` + `BRAND` (sell) or `PM` + `LT` (rent) → BRRRR refinance through `CAP`.
 5. `COO`, `TECH`, `TAX`, `ENT` and `IR` support every stage; `COMP` and `INS` monitor ongoing risk.
@@ -205,6 +209,7 @@ The roster is implemented as Claude Code project subagents and skills. See [`CLA
 | `BRAND` | Brand & Content Marketer | `brand-content-marketer` |
 | `DATA` | Data & Analytics Engineer | `data-analytics-engineer` |
 | `TECH` | PropTech Systems Architect | `proptech-architect` |
+| `INV` | Real Estate Investment Analyst | `real-estate-investment-analyst` |
 | — | Orchestrator: routes questions, coordinates experts, merges one answer | `expert-orchestrator` |
 | — | Meta agent: creates and improves agents and skills | `team-architect` |
 
@@ -251,4 +256,6 @@ The roster is implemented as Claude Code project subagents and skills. See [`CLA
 | S37 | CRM, PropTech & workflow automation | `crm-proptech-automation` |
 | S38 | Cybersecurity & wire-fraud prevention | `cybersecurity-wire-fraud-prevention` |
 | S39 | Expert routing & collaboration (used by `expert-orchestrator`; also `/consult-experts`) | `consult-experts` |
+| S41 | Listing data extraction & data-gap check | `listing-data-extraction` |
+| S42 | Investment verdict report (BUY / NEGOTIATE / PASS) + `scripts/deal_calc.py` | `investment-verdict-report` |
 | S40 | Agent & skill authoring + validator (used by `team-architect`, `proptech-architect`) | `agent-skill-authoring` |

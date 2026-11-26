@@ -5,7 +5,7 @@ description: "Maintains the company risk register and hurricane plan: property-l
 
 # Risk assessment & hurricane preparedness
 
-*Roster skill S34. Used by: `insurance-risk-advisor` (owner), `operations-director`, `renovation-project-manager`, `property-manager`, `chief-investment-strategist`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S34. Used by: `insurance-risk-advisor` (owner), `operations-director`, `renovation-project-manager`, `property-manager`, `chief-investment-strategist`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 See risks early, put owners and mitigations on each one, and survive storm season.

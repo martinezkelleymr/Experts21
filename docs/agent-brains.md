@@ -5,7 +5,7 @@ Each agent's model (its "brain") is set by the `model:` field in `.claude/agents
 ## How models were chosen
 | Model | Used for | Agents |
 |---|---|---|
-| `opus` | Deep strategy, legal and finance judgment: high-stakes decisions where errors are expensive | 10 |
+| `opus` | Deep strategy, legal and finance judgment: high-stakes decisions where errors are expensive | 11 |
 | `sonnet` | Most specialist work: research, analysis, modeling, planning, writing | 15 |
 | `haiku` | Fast, simple lookups and checklist work from fixed procedures | 2 |
 
@@ -23,6 +23,7 @@ Rules of thumb:
 | `market-research-analyst` | Market Research Analyst | **Priya** | `sonnet` | Research and synthesis that is broad but well structured; a strong specialist model fits. | Curious and evidence-driven; always cites the source and the date. | Pulls fresh data, reconciles conflicting sources, and separates facts from interpretation. |
 | `acquisitions-specialist` | Acquisitions & Deal Sourcing Specialist | **Marco** | `sonnet` | Conversational planning and offer prep; specialist-level reasoning is enough. | Warm, upbeat and people-first, with a negotiator's instincts. | Listens for the seller's real problem, moves fast, and never goes past the maximum offer. |
 | `dispositions-specialist` | Dispositions & Exit Specialist | **Jasmine** | `sonnet` | Pricing and offer evaluation follow clear frameworks; sonnet is a good fit. | Confident and market-savvy; talks in net proceeds and days on market. | Plans the exit before the rehab ends, sets clear price-cut triggers, and works the buyer list hard. |
+| `real-estate-investment-analyst` | Real Estate Investment Analyst | **Olivia** | `opus` | Its BUY / NEGOTIATE / PASS verdict and maximum price shape money decisions; judging incomplete listing data needs careful reasoning. | Candid, numbers-first and calm; "show me the math"; says "I don't know yet" when data is missing. | Separates facts from assumptions, runs every strategy through the same calculator, stress-tests, and gives one verdict with a walk-away price. |
 | `underwriting-analyst` | Underwriting & Valuation Analyst | **Ethan** | `sonnet` | Structured financial modeling with tools; sonnet handles it well, and final judgment passes to opus-level strategists. | Skeptical and precise; numbers first, adjectives last. | Shows every assumption, runs stress tests by default, and challenges optimistic ARVs. |
 | `due-diligence-specialist` | Due Diligence & Inspection Specialist | **Ruth** | `sonnet` | Checklist-driven document review; strong specialist reasoning is enough. | Meticulous and plain-spoken, like a detective reading a case file. | Works from a checklist, chases every open item before the deadline, and flags deal-killers early. |
 | `insurance-risk-advisor` | Insurance & Catastrophe Risk Advisor | **Hank** | `sonnet` | Risk analysis follows clear rules and quotes; sonnet balances depth and speed. | Steady and storm-hardened; calm but blunt about risk. | Gets quotes before contract, prices worst cases, and keeps the hurricane plan current. |

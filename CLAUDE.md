@@ -6,14 +6,14 @@ This repository is an **AI advisory team** for a consultant building a residenti
 2. **Renovate and resell** them for a profit (fix and flip).
 3. **Renovate and rent** them, then refinance (BRRRR).
 
-The team is **27 Claude Code project subagents** (25 domain experts plus an orchestrator and a meta agent) that share **40 project skills**. Everything is grounded in the research in `docs/` (snapshot: November 2026).
+The team is **28 Claude Code project subagents** (26 domain experts plus an orchestrator and a meta agent) that share **42 project skills**. Everything is grounded in the research in `docs/` (snapshot: November 2026).
 
 ## Repository layout
 ```
 docs/                     Research knowledge base (one file per topic), expert-roster.md, agent-brains.md
 knowledge/<agent-name>/   Company-specific documents each agent reads before every answer
-.claude/agents/           27 subagents (one .md file each, with model + personality)
-.claude/skills/<name>/    40 skills (SKILL.md each); shared across agents
+.claude/agents/           28 subagents (one .md file each, with model + personality)
+.claude/skills/<name>/    42 skills (SKILL.md each); shared across agents
   consult-experts/        Orchestration procedure + routing table (also /consult-experts)
   agent-skill-authoring/  Formats, templates and scripts/validate_team.py
 CLAUDE.md                 This guide
@@ -29,6 +29,7 @@ Running the orchestrator as the main agent is the most reliable way to let it de
 - `@"expert-orchestrator (agent)" <question>`, or just ask: "Use the expert-orchestrator to …".
 
 **Ask one expert directly** when the question is narrow:
+- `@"real-estate-investment-analyst (agent)" Is this Zillow listing a good investment? <paste listing>`. Olivia returns BUY / NEGOTIATE / PASS with the math.
 - `@"underwriting-analyst (agent)" Run a flip and BRRRR pro forma for …`
 - "Use the permitting-code-specialist to tell me whether this rehab triggers the FEMA 50% rule."
 - `claude --agent compliance-officer` for a whole session with one expert.
@@ -45,6 +46,7 @@ For ready-made example prompts, see [`docs/how-to-talk-to-your-experts.md`](docs
 | Real Estate Investment | `acquisitions-specialist` | Marco | `sonnet` | Acquisitions & Deal Sourcing Specialist | 10 |
 | Real Estate Investment | `chief-investment-strategist` | Victoria | `opus` | Chief Investment Strategist | 11 |
 | Real Estate Investment | `dispositions-specialist` | Jasmine | `sonnet` | Dispositions & Exit Specialist | 9 |
+| Real Estate Investment | `real-estate-investment-analyst` | Olivia | `opus` | Real Estate Investment Analyst: listing → BUY / NEGOTIATE / PASS | 15 |
 | Real Estate Investment | `market-research-analyst` | Priya | `sonnet` | Market Research Analyst | 5 |
 | Property Analysis | `due-diligence-specialist` | Ruth | `sonnet` | Due Diligence & Inspection Specialist | 6 |
 | Property Analysis | `insurance-risk-advisor` | Hank | `sonnet` | Insurance & Catastrophe Risk Advisor | 4 |
@@ -72,7 +74,7 @@ Full job descriptions, the skill matrix (which agents use each skill) and the co
 
 ## Knowledge folders, brains and personalities
 - **Knowledge folders:** each agent reads `knowledge/<agent-name>/` **before every answer**. Each folder's `README.md` lists the documents that belong there (e.g., the strategist's buy box, the underwriter's term sheets, the property manager's approved lease forms). Name files `YYYY-MM-DD-topic.md`. Sensitive files go in `knowledge/<agent-name>/private/` (git-ignored). Never store passwords, account numbers or personal IDs.
-- **Brains:** each agent file sets `model:`. `opus` for deep strategy, legal and finance judgment (10 agents, including the orchestrator and team architect); `sonnet` for most specialist work (15); `haiku` for fast checklist and lookup work (2). The reasons are in [`docs/agent-brains.md`](docs/agent-brains.md).
+- **Brains:** each agent file sets `model:`. `opus` for deep strategy, legal and finance judgment (11 agents, including the orchestrator and team architect); `sonnet` for most specialist work (15); `haiku` for fast checklist and lookup work (2). The reasons are in [`docs/agent-brains.md`](docs/agent-brains.md).
 - **Personalities:** every agent has a first name, a voice and a working style (e.g., Morgan the orchestrator, Victoria the strategist, Ethan the underwriter, Penny the transaction coordinator). Experts sign their sections with their name. Personality changes tone only, never accuracy or guardrails.
 
 ## How skills work here

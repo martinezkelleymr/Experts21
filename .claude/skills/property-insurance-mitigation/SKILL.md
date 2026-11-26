@@ -5,7 +5,7 @@ description: "Plans and compares property insurance for Florida investment homes
 
 # Property insurance quoting & mitigation
 
-*Roster skill S08. Used by: `insurance-risk-advisor` (owner), `due-diligence-specialist`, `underwriting-analyst`, `property-manager`, `cfo-financial-planner`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S08. Used by: `insurance-risk-advisor` (owner), `due-diligence-specialist`, `underwriting-analyst`, `property-manager`, `cfo-financial-planner`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Know the real insurance cost and insurability **before** the inspection period ends.

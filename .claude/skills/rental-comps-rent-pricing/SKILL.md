@@ -5,7 +5,7 @@ description: "Estimates market rent for single-family homes, townhomes and small
 
 # Rental comps & rent pricing
 
-*Roster skill S02. Used by: `market-research-analyst` (owner), `underwriting-analyst`, `property-manager`, `chief-investment-strategist`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S02. Used by: `market-research-analyst` (owner), `underwriting-analyst`, `property-manager`, `chief-investment-strategist`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Estimate achievable rent and days-to-lease so rental and BRRRR underwriting rests on real comps.

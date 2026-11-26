@@ -5,7 +5,7 @@ description: "Plans federal and Florida tax strategy for flips and rentals: deal
 
 # Real estate tax planning
 
-*Roster skill S20. Used by: `tax-strategist` (owner), `cfo-financial-planner`, `chief-investment-strategist`, `entity-securities-counsel`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S20. Used by: `tax-strategist` (owner), `cfo-financial-planner`, `chief-investment-strategist`, `entity-securities-counsel`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Keep more of each dollar earned, legally, and budget property taxes correctly.

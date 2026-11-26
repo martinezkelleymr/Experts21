@@ -5,7 +5,7 @@ description: "Compares sell (flip), hold (rent), BRRRR refinance and wholesale/a
 
 # Exit strategy analysis
 
-*Roster skill S04. Used by: `chief-investment-strategist` (owner), `underwriting-analyst`, `dispositions-specialist`, `cfo-financial-planner`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S04. Used by: `chief-investment-strategist` (owner), `underwriting-analyst`, `dispositions-specialist`, `cfo-financial-planner`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Pick the exit with the best risk-adjusted return and keep a fallback.

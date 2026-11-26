@@ -5,7 +5,7 @@ description: "Selects and adjusts recent sold comparables to estimate after-repa
 
 # Comparable sales & ARV analysis
 
-*Roster skill S01. Used by: `underwriting-analyst` (owner), `acquisitions-specialist`, `dispositions-specialist`, `chief-investment-strategist`, `market-research-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S01. Used by: `underwriting-analyst` (owner), `acquisitions-specialist`, `dispositions-specialist`, `chief-investment-strategist`, `market-research-analyst`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Produce a defensible ARV (and as-is value) from **sold** comps, not list prices or portal estimates.

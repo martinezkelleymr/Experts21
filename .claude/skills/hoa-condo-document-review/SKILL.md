@@ -5,7 +5,7 @@ description: "Reviews HOA and condominium governing documents and financials for
 
 # HOA & condo document review
 
-*Roster skill S10. Used by: `due-diligence-specialist` (owner), `real-estate-attorney`, `underwriting-analyst`, `property-manager`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S10. Used by: `due-diligence-specialist` (owner), `real-estate-attorney`, `underwriting-analyst`, `property-manager`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Make sure the association lets us do what the strategy needs, at a known cost.

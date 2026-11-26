@@ -5,7 +5,7 @@ description: "Researches Boca Raton and Delray Beach market conditions and neigh
 
 # Market & neighborhood research
 
-*Roster skill S05. Used by: `market-research-analyst` (owner), `chief-investment-strategist`, `acquisitions-specialist`, `underwriting-analyst`, `data-analytics-engineer`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S05. Used by: `market-research-analyst` (owner), `chief-investment-strategist`, `acquisitions-specialist`, `underwriting-analyst`, `data-analytics-engineer`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Keep a current, sourced view of the market at city, ZIP and neighborhood level.

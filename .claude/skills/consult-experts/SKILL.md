@@ -19,6 +19,7 @@ Note the strategy (flip / rent / BRRRR / company-level), the stage (strategy, so
 | Prices, rents, neighborhoods, trends | `market-research-analyst` | `data-analytics-engineer` |
 | Finding deals, sellers, offers | `acquisitions-specialist` | `lead-generation-marketer`, `underwriting-analyst` |
 | Selling a flip, wholesale, exit timing | `dispositions-specialist` | `brand-content-marketer`, `interior-design-staging-specialist` |
+| Is this listing/property a good investment? Zillow/Redfin link, BUY / NEGOTIATE / PASS | `real-estate-investment-analyst` | `acquisitions-specialist`, `renovation-project-manager`, `insurance-risk-advisor` |
 | ARV, comps, pro forma, DSCR, MAO | `underwriting-analyst` | `renovation-project-manager`, `capital-markets-advisor` |
 | Inspections, HOA docs, title, liens | `due-diligence-specialist` | `real-estate-attorney`, `permitting-code-specialist` |
 | Insurance, flood, hurricanes, risk | `insurance-risk-advisor` | `due-diligence-specialist` |

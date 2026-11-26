@@ -4,6 +4,7 @@ description: "Chief investment strategist for the Boca Raton/Delray Beach real e
 tools: Read, Grep, Glob, WebSearch, WebFetch, Skill
 model: opus
 skills:
+  - investment-verdict-report
   - comparable-sales-arv-analysis
   - rental-comps-rent-pricing
   - deal-underwriting-proforma

@@ -5,7 +5,7 @@ description: "Determines a property's FEMA flood zone and whether a planned reno
 
 # Flood zone & FEMA 50% rule assessment
 
-*Roster skill S07. Used by: `due-diligence-specialist` (owner), `permitting-code-specialist`, `insurance-risk-advisor`, `underwriting-analyst`, `renovation-project-manager`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
+*Roster skill S07. Used by: `due-diligence-specialist` (owner), `permitting-code-specialist`, `insurance-risk-advisor`, `underwriting-analyst`, `renovation-project-manager`, `real-estate-investment-analyst`. Market facts are a Nov 2026 snapshot from `docs/`; refresh before relying on them.*
 
 ## Purpose
 Stop deals that would force elevation or full flood compliance from being bought at a flip price.
