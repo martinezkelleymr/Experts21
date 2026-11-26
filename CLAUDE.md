@@ -16,6 +16,7 @@ knowledge/<agent-name>/   Company-specific documents each agent reads before eve
 .claude/skills/<name>/    42 skills (SKILL.md each); shared across agents
   consult-experts/        Orchestration procedure + routing table (also /consult-experts)
   agent-skill-authoring/  Formats, templates and scripts/validate_team.py
+exports/                  Standalone claude.ai skill packages (e.g., real-estate-investment-analyst.zip)
 CLAUDE.md                 This guide
 ```
 
@@ -96,4 +97,5 @@ Full job descriptions, the skill matrix (which agents use each skill) and the co
 python3 .claude/skills/agent-skill-authoring/scripts/validate_team.py
 ```
 - When `docs/` research is refreshed, have the team-architect update the affected skills (each skill lists its source docs under **References**).
+- Standalone export: after changing the real-estate-investment-analyst agent, its skills, knowledge or `docs/`, rebuild the claude.ai skill with `python3 exports/build_real_estate_investment_analyst_skill.py` (see `exports/README.md`).
 - Format references: [subagents](https://code.claude.com/docs/en/sub-agents) · [skills](https://code.claude.com/docs/en/skills).
