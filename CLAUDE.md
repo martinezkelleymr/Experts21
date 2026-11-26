@@ -16,6 +16,7 @@ knowledge/<agent-name>/   Company-specific documents each agent reads before eve
 .claude/skills/<name>/    42 skills (SKILL.md each); shared across agents
   consult-experts/        Orchestration procedure + routing table (also /consult-experts)
   agent-skill-authoring/  Formats, templates and scripts/validate_team.py
+sdk/                      Node.js Agent SDK script: ask the real-estate-investment-analyst from the command line
 exports/                  Standalone claude.ai skill packages (e.g., real-estate-investment-analyst.zip)
 CLAUDE.md                 This guide
 ```
@@ -36,6 +37,8 @@ Running the orchestrator as the main agent is the most reliable way to let it de
 - `claude --agent compliance-officer` for a whole session with one expert.
 
 For ready-made example prompts, see [`docs/how-to-talk-to-your-experts.md`](docs/how-to-talk-to-your-experts.md).
+
+**From code (Agent SDK):** `cd sdk && npm install && node ask-analyst.mjs "<question>"` asks Olivia (`real-estate-investment-analyst`) with her knowledge folder loaded. See [`sdk/README.md`](sdk/README.md).
 
 **Change the team.** Ask the meta agent: "Use the team-architect to add a short-term-rental revenue manager agent," or "…to improve the insurance skill with the 2027 rate filings."
 
